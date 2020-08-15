@@ -6,10 +6,36 @@ body {
     align-items: center;
     background:linear-gradient( #ffa600, rgb(243, 91, 31));
     color: white;
-    font-size: 50px;
+    font-size: 70px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .temperature {
     cursor: pointer;
+}
+
+.location {
+    display: flex;
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+
+.precipitation {
+    font-size: 50px;
+}
+
+#weatherIcon {
+    margin-left: 20px;
+    width: 128px;
+    height: 128px;
+}
+
+#location-text {
+    margin-block-start: .2em;
+    margin-block-end: .2em;
+}
+
+#precipitation-text {
+    margin-block-start: .6em;
+    margin-block-end: .6em;
 }
