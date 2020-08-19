@@ -21,7 +21,7 @@ window.onload = function() {
             // capitalizes first letter of the precipitation description
             precipitationText.innerText = currentPrecip.charAt(0).toUpperCase() + currentPrecip.slice(1);
             setIcon(iconType, document.getElementById("weatherIcon"));
-        });
+    });
         
     temperatureSection.addEventListener("click", convertTemperatureUnits);
     
