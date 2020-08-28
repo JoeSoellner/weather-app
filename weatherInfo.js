@@ -24,7 +24,7 @@ window.onload = function() {
     fetch(apiWeatherData)
         .then(response => response.json())
         .then(json => {
-            let currentTemp = json.current.temp;
+            let currentTemp = json.current.temp.toFixed(0);
             let currentPrecip = json.current.weather[0].description;
             var iconType = json.current.weather[0].icon;
             temperatureMeasurement.innerText = currentTemp;

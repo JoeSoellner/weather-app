@@ -24,7 +24,6 @@ window.onload = function() {
             let targetId = e.target.id;
             let index = targetId.charAt(targetId.length - 1);
             sessionStorage.setItem("selectedLocation", JSON.stringify(citySearchResults[index]));
-            let a = JSON.stringify(citySearchResults[index]);
             window.location.href = "/weatherInfo.html";
         }
     });
