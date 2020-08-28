@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient( #ffa600, rgb(243, 91, 31));
+    color: white;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+#location-search-results {
+    margin-top: 0px;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+}
