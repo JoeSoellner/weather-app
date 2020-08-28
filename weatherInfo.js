@@ -6,6 +6,16 @@ window.onload = function() {
     let temperatureMeasurement = document.getElementById("temperature-text");
     let temperatureUnit = document.getElementById("temperature-unit");
     let temperatureSection = document.querySelector(".temperature");
+    // get the user selected location from the seesion storage
+    let selectedLocation = JSON.parse(sessionStorage.getItem("selectedLocation"));
+
+    // check that selected location is not null before just in case
+    if (selectedLocation) {
+        latitude = selectedLocation.geometry.lat;
+        longitude = selectedLocation.geometry.lng;
+        // use the first section from the formatted string instead of messing with components in object
+        locationText.innerText = selectedLocation.formatted.split(",")[0];
+    }
 
     // api call, key is not linked to anything important but there is limit on the calls per day (1mil per month)
     const apiWeatherData = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&%20exclude=minutely,hourly&appid=6904f001221c4762a57f0cca6104e776&units=metric`;
@@ -39,13 +49,13 @@ window.onload = function() {
     // converts to Celsius and rounds to two floating points
     function fahrenheitToCelsius(fahrenheit) {
         f = (fahrenheit - 32) * (5 / 9);
-        return f.toFixed(2);
+        return f.toFixed(0);
     }
 
     // converts to Fahrenheit and rounds to two floating points
     function celsiusToFahrenheit(celsius) {
         c = (celsius * (9 / 5 )) + 32;
-        return c.toFixed(2);
+        return c.toFixed(0);
     }
 
     // sets the icon based off the api's icon and places it on the document
